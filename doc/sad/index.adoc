@@ -1,0 +1,49 @@
+
+
+// numbering from here on
+:numbered:
+
+<<<<
+// 1. Introduction and Goals
+include::{docdir}/01_introduction_and_goals.adoc[]
+
+<<<<
+// 2. Architecture Constraints
+include::{docdir}/02_architecture_constraints.adoc[]
+
+<<<<
+// 3. System Scope and Context
+include::{docdir}/03_system_scope_and_context.adoc[]
+
+<<<<
+// 4. Solution Strategy
+//include::{docdir}/04_solution_strategy.adoc[]
+
+<<<<
+// 5. Building Block View
+//include::{docdir}/05_building_block_view.adoc[]
+
+<<<<
+// 6. Runtime View
+//include::{docdir}/06_runtime_view.adoc[]
+
+<<<<
+// 7. Deployment View
+//include::{docdir}/07_deployment_view.adoc[]
+
+<<<<
+// 8. Concepts
+//include::{docdir}/08_concepts.adoc[]
+
+<<<<
+// 9. Design Decisions
+//include::{docdir}/09_design_decisions.adoc[]
+
+<<<<
+// 10. Quality Scenarios
+//include::{docdir}/10_quality_scenarios.adoc[]
+
+<<<<
+// 11. Technical Risks
+//include::{docdir}/11_technical_risks.adoc[]
+

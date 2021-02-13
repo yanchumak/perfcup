@@ -1,0 +1,25 @@
+[[section-introduction-and-goals]]
+== Introduction
+
+****
+What is perfcup?
+
+The main purpose of perfcup is to provide a platform for competition.
+Organizers provide requirements for system and participants need to create
+a solution with low latency and high throughput based on requirements.
+
+Participants upload their solutions and the perfcup system tests them.
+A solution can be implemented using any programming language.
+In addition, perfcup is used to study and evaluate technology,
+patterns and frameworks for performance testing and optimizations.
+
+Main features:
+
+* User registration
+* Upload solutions
+* Testing solutions
+* Provision of statistics and metrics
+* Sandbox for testing solution
+
+****
+
