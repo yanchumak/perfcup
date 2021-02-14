@@ -4,20 +4,16 @@
 :numbered:
 
 <<<<
-// 1. Introduction and Goals
-include::{docdir}/01_introduction_and_goals.adoc[]
+include::{docdir}/01_introduction.adoc[]
 
 <<<<
-// 2. Architecture Constraints
-include::{docdir}/02_architecture_constraints.adoc[]
+include::{docdir}/02_constraints.adoc[]
 
 <<<<
-// 3. System Scope and Context
-include::{docdir}/03_system_scope_and_context.adoc[]
+include::{docdir}/03_context.adoc[]
 
 <<<<
-// 4. Solution Strategy
-//include::{docdir}/04_solution_strategy.adoc[]
+include::{docdir}/04_solution_strategy.adoc[]
 
 <<<<
 // 5. Building Block View
