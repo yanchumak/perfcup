@@ -17,7 +17,7 @@ include::{docdir}/04_solution_strategy.adoc[]
 
 <<<<
 // 5. Building Block View
-//include::{docdir}/05_building_block_view.adoc[]
+include::{docdir}/05_building_block_view.adoc[]
 
 <<<<
 // 6. Runtime View

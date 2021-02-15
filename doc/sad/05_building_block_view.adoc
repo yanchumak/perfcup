@@ -1,0 +1,22 @@
+[[section-building-block-view]]
+
+
+== Building Block View
+
+[plantuml, building-block-level-0, png]
+....
+@startuml
+frame "Perfcup" <<System>> {
+    component "Backend" <<Service>> as bs
+    component "Artillery" <<Service>> as as
+    component "Statistics aggregator" <<Service>> as ss
+}
+
+component "Solution" <<Repository>> as sr
+
+sr -left- bs
+ss -right- bs
+ss -up- as
+
+@enduml
+....

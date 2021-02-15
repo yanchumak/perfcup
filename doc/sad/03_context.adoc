@@ -12,13 +12,11 @@ which other systems does it interact?
 actor "Competitor" as c
 artifact Solution as s
 actor "Test configurer" as tc
-actor "Orgnanizer" as o
 component "Solution" <<Repository>> as sr
 component "Perfcup" <<System>> as ps
 component "Testing environment" as te
 s <.left- c
 s -right.> ps
-ps <.right- o
 ps <.down- tc
 ps -up.> sr
 ps -up.> te
@@ -30,11 +28,9 @@ te -right.> sr
 
 |===
 |Actor | Description
-|Competitor|Perfcup user who uploads solution to Perfcup system
-|Solution| Provided application by a competitor which will be test by Perfcup
-|Organizer|Person who provides requirements and monitors the competition
+|Competitor|Perfcup user who uploads solution
+|Solution| Provided application by a competitor
 |Test configurer|Test configurer is a person who configures tests according to requirements
-received from organizer
 |Testing environment| Isolated environment for testing solution
 |Solution repository| Repository for storing solutions
 |===
