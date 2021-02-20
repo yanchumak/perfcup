@@ -11,13 +11,13 @@ which other systems does it interact?
 @startuml
 actor "Competitor" as c
 artifact Solution as s
-actor "Test configurer" as tc
-component "Solution" <<Repository>> as sr
+actor "Test operator" as to
+component "Solution storage" <<Repository>> as sr
 component "Perfcup" <<System>> as ps
 component "Testing environment" as te
 s <.left- c
 s -right.> ps
-ps <.down- tc
+ps <.down- to
 ps -up.> sr
 ps -up.> te
 te -right.> sr

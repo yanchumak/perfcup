@@ -1,0 +1,66 @@
+[[section-runtime-view]]
+== Runtime View
+
+=== Solution uploading
+[plantuml, runtime-view-solution-uploading, png]
+....
+@startuml
+actor Competitor as c
+participant "Perfcup API" as api
+database "Solution storage" as repo
+
+c -> api: Solution
+api -> api: Validate user quota
+alt Success
+api -> repo:
+repo -> api:
+api -> c: Solution successfully uploaded
+else
+api -> c: Solution uploading error
+end
+@enduml
+....
+
+=== Test execution
+[plantuml, runtime-view-test-execution, png]
+....
+@startuml
+actor "Test operator" as to
+participant "Perfcup API" as api
+participant "Test executor" as te
+database "Solution storage" as repo
+
+to -> api: Execute test
+api -> te: Is test already running?
+alt Yes
+te -> te: Add to tests queue
+te -> api:
+api -> to: Accepted
+else No
+te -> api:
+api -> to: Accepted
+te -> repo: Find solution
+repo -> te:
+te -> te: Create new testing environment
+te -> te: Run solution
+te -> te: Run load producer
+end
+
+@enduml
+....
+
+=== Testing process
+[plantuml, runtime-view-testing, png]
+....
+@startuml
+participant "Load producer" as lp
+participant "Statistic" as s
+participant "Load consumer" as lc
+
+loop
+lp -> lc: Request
+lc -> lp: Response
+end
+lp --> s: Metrics/Requests results
+....
+

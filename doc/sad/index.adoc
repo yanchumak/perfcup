@@ -21,11 +21,11 @@ include::{docdir}/05_building_block_view.adoc[]
 
 <<<<
 // 6. Runtime View
-//include::{docdir}/06_runtime_view.adoc[]
+include::{docdir}/06_runtime_view.adoc[]
 
 <<<<
 // 7. Deployment View
-//include::{docdir}/07_deployment_view.adoc[]
+include::{docdir}/07_deployment_view.adoc[]
 
 <<<<
 // 8. Concepts

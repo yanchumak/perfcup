@@ -7,16 +7,30 @@
 ....
 @startuml
 frame "Perfcup" <<System>> {
-    component "Backend" <<Service>> as bs
-    component "Artillery" <<Service>> as as
-    component "Statistics aggregator" <<Service>> as ss
+    component "Perfcup API" <<Service>> as api
+    component "Load producer" <<Service>> as prod
+    component "Statistic" <<Service>> as stat
+    component "Test executor" <<Service>> as test_exec
 }
 
-component "Solution" <<Repository>> as sr
+component "Solution storage" <<Repository>> as repo
+component "Load consumer" <<Solution>> as cons
 
-sr -left- bs
-ss -right- bs
-ss -up- as
+api -up- repo
+cons -- prod
+stat -- cons
+api -down- test_exec
 
 @enduml
 ....
+
+====
+* Perfcup API - Service for providing such functionality:
+** Execute test
+** View tests result
+** User management
+* Test executor - Service for executing test with automatic deployment testing environment.
+* Load producer - Service which generates load for testing solution.
+* Statistic - Service for collecting metrics and providing possibility
+to aggregate results depending on test rules.
+====
